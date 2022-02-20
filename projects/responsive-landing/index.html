@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crescendo - Academia de Música</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Rowdies:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- https://fontawesome.com/icons -->
+    <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1 id="header__logo"><a href="index.html">Crescendo</a></h1>
+      <nav id="header__nav">
+        <input type="checkbox" id="header__nav__toggle" />
+        <label for="header__nav__toggle" id="header__nav__icon"
+          ><i class="fa fa-bars"></i
+        ></label>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="index__grid-contenedor-padre">
+      <!-- LOGO + TITLE + SUBTITLE -->
+      <article id="landing" class="index__grid-item-hijo-1">
+        <h2>Academia de música Crescendo</h2>
+        <h3>
+          En Academia de música Crescendo podrás aprender música de tus artistas
+          favoritos junto a profesionales.
+        </h3>
+        <p>
+          Para lograr desempeñar nuestra función contamos con un destacado staff
+          de profesores con amplia trayectoria profesional quienes han trabajado
+          con artistas como {artistas conocidos}.
+        </p>
+        <img
+          src="https://fakeimg.pl/640x360"
+          alt="Personas en una banda tocando instrumentos"
+        />
+      </article>
+      <!-- CURSOS -->
+      <article class="index__grid-item-hijo-2" id="cursos">
+        <h2 class="center">¿Que te gustaria aprender?</h2>
+        <figure>
+          <img src="https://fakeimg.pl/250x100" alt="Guitarra" />
+          <figcaption>Curso de guitarra</figcaption>
+        </figure>
+        <figure>
+          <img src="https://fakeimg.pl/250x100" alt="Piano" />
+          <figcaption>Curso de piano</figcaption>
+        </figure>
+        <figure>
+          <img src="https://fakeimg.pl/250x100" alt="Canto" />
+          <figcaption>Curso de canto</figcaption>
+        </figure>
+        <form method="get" action="/cursos.html">
+          <button class="button__primary--action" type="submit">
+            Ver todos los cursos
+          </button>
+        </form>
+      </article>
+      <!-- NEWSLETTER -->
+      <article class="index__grid-item-hijo-3" id="newsletter">
+        <h2 class="center">Newsletter</h2>
+        <h3>Suscribite para recibir las ultimas noticias!</h3>
+        <form action="" method="post">
+          <input type="email" name="email" id="email" />
+          <button type="submit" class="button__primary--action">
+            Suscribirse
+          </button>
+        </form>
+      </article>
+    </section>
+    <footer>
+      <h2 id="footer__logo"><a href="index.html">Crescendo</a></h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <section id="footer__social-media__icons">
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+      </section>
+      <div id="footer__copyright">
+        <p>Todos los derechos reservados &copy; 2022 | Crescendo</p>
+      </div>
+    </footer>
+  </body>
+</html>
