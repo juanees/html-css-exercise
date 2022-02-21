@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crescendo - Academia de Música</title>
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,11 +13,18 @@
     />
     <!-- https://fontawesome.com/icons -->
     <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body>
-    <header>
+  <body class="index__grid-contenedor-padre">
+    <header class="index__grid-item-hijo-1">
       <h1 id="header__logo"><a href="index.html">Crescendo</a></h1>
       <nav id="header__nav">
+        <input type="checkbox" id="header__nav__toggle" />
+        <label for="header__nav__toggle" id="header__nav__icon"
+          ><i class="fa fa-bars"></i
+        ></label>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="cursos.html">Cursos</a></li>
@@ -29,14 +34,14 @@
         </ul>
       </nav>
     </header>
-    <section>
+    <section class="index__grid-item-hijo-2">
       <!-- NEWSLETTER -->
-      <article class="container" id="newsletter">
-        <h2 class="center">Newsletter</h2>
-        <h3>
+      <article id="newsletter" class="newsletter___grid-contenedor-padre">
+        <h2 class="newsletter__grid-item-hijo-1">Newsletter</h2>
+        <h3 class="newsletter__grid-item-hijo-2">
           Suscribite para recibir notificaciones de nuevos cursos y horarios!
         </h3>
-        <form action="" method="post">
+        <form class="newsletter__grid-item-hijo-3" action="" method="post">
           <input type="email" name="email" id="email" />
           <button type="submit" class="button__primary--action">
             Suscribirse
@@ -44,69 +49,95 @@
         </form>
       </article>
       <!-- CURSOS -->
-      <article class="container" id="cursos">
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Guitarra" />
-          <figcaption>Curso de guitarra</figcaption>
-        </figure>
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Piano" />
-          <figcaption>Curso de piano</figcaption>
-        </figure>
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Canto" />
-          <figcaption>Curso de canto</figcaption>
-        </figure>
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Consola DJ" />
-          <figcaption>Curso de DJ</figcaption>
-        </figure>
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Bajo" />
-          <figcaption>Curso de bajo</figcaption>
-        </figure>
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Batería" />
-          <figcaption>Curso de batería</figcaption>
-        </figure>
-        <form method="get" action="/cursos.html">
+      <article id="cursos" class="cursos__gallery__grid-contenedor-padre">
+        <span class="cursos__galery cursos__gallery__grid-item-hijo-1">
+          <figure>
+            <img src="https://fakeimg.pl/250x100" alt="Guitarra" />
+            <figcaption>Curso de guitarra</figcaption>
+          </figure>
+          <figure>
+            <img src="https://fakeimg.pl/250x100" alt="Piano" />
+            <figcaption>Curso de piano</figcaption>
+          </figure>
+          <figure>
+            <img src="https://fakeimg.pl/250x100" alt="Canto" />
+            <figcaption>Curso de canto</figcaption>
+          </figure>
+          <figure>
+            <img src="https://fakeimg.pl/250x100" alt="Consola DJ" />
+            <figcaption>Curso de DJ</figcaption>
+          </figure>
+          <figure>
+            <img src="https://fakeimg.pl/250x100" alt="Bajo" />
+            <figcaption>Curso de bajo</figcaption>
+          </figure>
+          <figure>
+            <img src="https://fakeimg.pl/250x100" alt="Batería" />
+            <figcaption>Curso de batería</figcaption>
+          </figure></span
+        >
+        <form
+          class="cursos__gallery__grid-item-hijo-2"
+          method="get"
+          action="/cursos.html"
+        >
           <button class="button__primary--action" type="submit">
             Ver todos los cursos
           </button>
         </form>
       </article>
-      <article class="container" id="contacto-curso">
-        <h2 class="center">Newsletter</h2>
-        <h3>¿Queres recibir información sobre un curso?</h3>
-        <form action="" method="post">
-          <label for="person_name">Nombre</label>
-          <input type="text" name="person_name" id="person_name" required />
-          <label for="person_email">Email</label>
-          <input type="email" name="person_email" id="person_email" required />
-          <label for="curso_seleccionado">Curso</label>
-          <select name="curso_seleccionado" id="curso_seleccionado" required>
-            <option value="">Seleccione una opción</option>
-            <option value="Guitarra">Guitarra</option>
-            <option value="Piano">Piano</option>
-            <option value="Canto">Canto</option>
-            <option value="DJ">DJ</option>
-            <option value="Bajo">Bajo</option>
-            <option value="Batería">Batería</option>
-          </select>
-          <label for="consulta_curso">Mensaje</label>
-          <textarea
-            name="consulta_curso"
-            id="consulta_curso"
-            cols="30"
-            rows="10"
-          ></textarea>
-          <button type="submit" class="button__primary--action">
+      <article
+        id="contacto-curso"
+        class="cursos__contacto__grid-contenedor-padre"
+      >
+        <h2 class="cursos__contacto-item-hijo-1">Newsletter</h2>
+        <h3 class="cursos__contacto-item-hijo-2">
+          ¿Queres recibir información sobre un curso?
+        </h3>
+        <form id="form__contacto-cursos" action="" method="post">
+          <span class="cursos__contacto-item-hijo-3">
+            <label for="person_name">Nombre</label>
+            <input type="text" name="person_name" id="person_name" required />
+            <label for="person_email">Email</label>
+            <input
+              type="email"
+              name="person_email"
+              id="person_email"
+              required
+            />
+          </span>
+          <span class="cursos__contacto-item-hijo-4">
+            <label for="curso_seleccionado">Curso</label>
+            <select name="curso_seleccionado" id="curso_seleccionado" required>
+              <option value="">Seleccione una opción</option>
+              <option value="Guitarra">Guitarra</option>
+              <option value="Piano">Piano</option>
+              <option value="Canto">Canto</option>
+              <option value="DJ">DJ</option>
+              <option value="Bajo">Bajo</option>
+              <option value="Batería">Batería</option>
+            </select>
+          </span>
+          <span class="cursos__contacto-item-hijo-5">
+            <label for="consulta_curso">Mensaje</label>
+            <textarea
+              name="consulta_curso"
+              id="consulta_curso"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </span>
+          <button
+            class="cursos__contacto-item-hijo-6"
+            type="submit"
+            class="button__primary--action"
+          >
             Enviar consulta
           </button>
         </form>
       </article>
     </section>
-    <footer>
+    <footer class="index__grid-item-hijo-3">
       <h2 id="footer__logo"><a href="index.html">Crescendo</a></h2>
       <nav>
         <ul>

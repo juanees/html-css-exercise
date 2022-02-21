@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crescendo - Academia de Música</title>
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,9 +13,12 @@
     />
     <!-- https://fontawesome.com/icons -->
     <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body>
-    <header>
+  <body class="index__grid-contenedor-padre">
+    <header class="index__grid-item-hijo-1">
       <h1 id="header__logo"><a href="index.html">Crescendo</a></h1>
       <nav id="header__nav">
         <input type="checkbox" id="header__nav__toggle" />
@@ -33,9 +34,9 @@
         </ul>
       </nav>
     </header>
-    <section class="index__grid-contenedor-padre">
+    <section class="index__grid-item-hijo-2">
       <!-- LOGO + TITLE + SUBTITLE -->
-      <article id="landing" class="index__grid-item-hijo-1">
+      <article id="landing">
         <h2>Academia de música Crescendo</h2>
         <h3>
           En Academia de música Crescendo podrás aprender música de tus artistas
@@ -52,31 +53,39 @@
         />
       </article>
       <!-- CURSOS -->
-      <article id="cursos" class="index__grid-item-hijo-2">
-        <h2 class="center">¿Que te gustaria aprender?</h2>
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Guitarra" />
-          <figcaption>Curso de guitarra</figcaption>
-        </figure>
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Piano" />
-          <figcaption>Curso de piano</figcaption>
-        </figure>
-        <figure>
-          <img src="https://fakeimg.pl/250x100" alt="Canto" />
-          <figcaption>Curso de canto</figcaption>
-        </figure>
-        <form method="get" action="/cursos.html">
+      <article id="cursos" class="cursos__grid-contenedor-padre">
+        <h2 class="cursos__grid-item-hijo-1">¿Que te gustaria aprender?</h2>
+        <span class="cursos__grid-item-hijo-2 cursos__flex-container">
+          <figure class="cursos__flex-items">
+            <img src="https://fakeimg.pl/250x100" alt="Guitarra" />
+            <figcaption>Curso de guitarra</figcaption>
+          </figure>
+          <figure class="cursos__flex-items">
+            <img src="https://fakeimg.pl/250x100" alt="Piano" />
+            <figcaption>Curso de piano</figcaption>
+          </figure>
+          <figure class="cursos__flex-items">
+            <img src="https://fakeimg.pl/250x100" alt="Canto" />
+            <figcaption>Curso de canto</figcaption>
+          </figure>
+        </span>
+        <form
+          class="cursos__grid-item-hijo-3"
+          method="get"
+          action="/cursos.html"
+        >
           <button class="button__primary--action" type="submit">
             Ver todos los cursos
           </button>
         </form>
       </article>
       <!-- NEWSLETTER -->
-      <article id="newsletter" class="index__grid-item-hijo-3">
-        <h2 class="center">Newsletter</h2>
-        <h3>Suscribite para recibir las ultimas noticias!</h3>
-        <form action="" method="post">
+      <article id="newsletter" class="newsletter___grid-contenedor-padre">
+        <h2 class="newsletter__grid-item-hijo-1">Newsletter</h2>
+        <h3 class="newsletter__grid-item-hijo-2">
+          Suscribite para recibir las ultimas noticias!
+        </h3>
+        <form class="newsletter__grid-item-hijo-3" action="" method="post">
           <input type="email" name="email" id="email" />
           <button type="submit" class="button__primary--action">
             Suscribirse
@@ -84,24 +93,24 @@
         </form>
       </article>
     </section>
-    <footer>
+    <footer class="index__grid-item-hijo-3">
       <span id="footer__container">
-      <h2 id="footer__logo"><a href="index.html">Crescendo</a></h2>
-      <nav id="footer__nav">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="cursos.html">Cursos</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <section id="footer__social-media__icons">
-        <a href=""><i class="fa-brands fa-twitter"></i></a>
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-      </section>
-    </span>
+        <h2 id="footer__logo"><a href="index.html">Crescendo</a></h2>
+        <nav id="footer__nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <section id="footer__social-media__icons">
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+        </section>
+      </span>
       <div id="footer__copyright">
         <p>Todos los derechos reservados &copy; 2022</p>
       </div>
